@@ -74,9 +74,6 @@ To install all dependencies:
 ```bash
 pip install pandas numpy wrds pyarrow matplotlib seaborn tqdm scikit-learn
 
----
-
----
 
 
 
