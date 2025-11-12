@@ -24,9 +24,7 @@ Goal	Description
 𝑂
 𝑆
 2
-R
-OOS
-2
+
 	​
 
  performance
