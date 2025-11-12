@@ -28,7 +28,10 @@ Below is the detailed breakdown of each team member’s responsibilities and con
   1. Analyzed residual distributions of key models (OLS-3, ENet, RF) to assess the robustness of predictions against outliers.
   2. Conducted subgroup analysis by size buckets, evaluating model performance differences across small, medium, and large-cap stocks.
   3. Identified overfitting symptoms by comparing validation set and test set performance metrics (e.g., \(R_{oos }^{2}\), prediction error) for all models.
-  4. Attempted an additional tuning experiment (e.g., adjusting ENet’s α from 0.5 to 0.7) and documented its impact on model performance—including detailed records even though the tuning did not yield significant improvements.
+  4. Attempted an additional tuning experiment (e.g., adjusting ENet’s α from 0.5 to 0.7) and documented its impact on model performance—including detailed records even though the tuning did not yield significant improvements
+
+## Member 3: 张普彧 2025213547
+- At the last minute, he realized the importance of the assignment, expressed the willingness to participate, and reviewed the code of the baseline model.
 
 ## 🧭 Overview
 
