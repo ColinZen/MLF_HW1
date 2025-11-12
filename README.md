@@ -5,6 +5,30 @@
 *The Review of Financial Studies*, 33(5), 2223–2273.**
 
 ---
+# Group Member Contribution
+Below is the detailed breakdown of each team member’s responsibilities and contributions to the assignment:
+
+## Member 1: 郑强鑫 2025213633
+- Completed the end-to-end **feature processing pipeline** in line with assignment requirements:
+  1. Executed monthly cross-sectional data transformation: implemented the workflow of "ranking → percentiles calculation → mapping values to the [-1, 1] range" to standardize features.
+  2. Performed monthly median imputation for missing feature values, ensuring data completeness for subsequent modeling.
+  3. Created 2-digit SIC industry dummies, covering approximately 74 industry buckets to control for industry-specific variations.
+- Independently built, trained, and fine-tuned three core models:
+  1. **OLS-3 Model**: Constructed the baseline model using size, book-to-market (BM), and momentum factors; verified its performance against the test set.
+  2. **Random Forest (RF) Model**: Designed a hyperparameter grid (tree depth: {3, 5, 7}; number of trees: {100, 300, 500}) and conducted rolling validation to select optimal parameters; evaluated model stability via out-of-sample \(R_{oos }^{2}\).
+  3. **Gradient Boosted Regression Trees (GBRT) Model**: Tuned critical hyperparameters (learning rate: {0.05, 0.1, 0.2}; tree depth: {3, 5, 7}; number of trees: {100, 300, 500}) through annual re-estimation and rolling validation; optimized model predictive accuracy based on validation set performance.
+- Created and edited all model-related visualization materials, including (but not limited to) feature importance bar plots for RF/GBRT, 36-month rolling \(R_{oos }^{2}\) curves for stock-level evaluation, and residual distribution histograms.
+
+
+## Member 2: 竺瑞航 2025213637
+- Led the **data merging process**: Integrated multi-source datasets (e.g., CRSP stock monthly data, Compustat firm fundamentals, and CRSP-Compustat Merged (CCM) link table) while strictly adhering to lag rules (annual data ≥ 6 months lag, quarterly data > 4 months lag, monthly data ≥ 1 month lag) to prevent look-ahead bias.
+- Built and fine-tuned the **Elastic Net (ENet) model**: Tested hyperparameters for α (0.1, 0.5, 0.9) and l1_ratio; selected the optimal model configuration via rolling validation using out-of-sample \(R_{oos }^{2}\) as the evaluation metric.
+- Assisted in the hyperparameter tuning of the GBRT model: Collaborated with Member 1 to validate the impact of learning rate and tree depth adjustments on model performance, providing supplementary test results for parameter selection.
+- Fulfilled all requirements under **Q7 (Diagnostics & Tuning Trial)**:
+  1. Analyzed residual distributions of key models (OLS-3, ENet, RF) to assess the robustness of predictions against outliers.
+  2. Conducted subgroup analysis by size buckets, evaluating model performance differences across small, medium, and large-cap stocks.
+  3. Identified overfitting symptoms by comparing validation set and test set performance metrics (e.g., \(R_{oos }^{2}\), prediction error) for all models.
+  4. Attempted an additional tuning experiment (e.g., adjusting ENet’s α from 0.5 to 0.7) and documented its impact on model performance—including detailed records even though the tuning did not yield significant improvements.
 
 ## 🧭 Overview
 
