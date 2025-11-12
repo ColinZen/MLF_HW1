@@ -85,29 +85,4 @@ macro["month"] = pd.to_datetime(macro["month"])
 
 merged = pd.merge(firm, macro, left_on="DATE", right_on="month", how="left")
 print(f"Merged dataset shape: {merged.shape}")
-These files serve as inputs for:
 
-merge_firm_and_macro()
-
-add_rf_to_macro()
-
-build_features()
-in the data processing pipeline.
-
-
-Reference
-
-Gu, Kelly, & Xiu (2020). Empirical Asset Pricing via Machine Learning.
-Review of Financial Studies, 33(5), 2223–2273.
-
-Notes
-
-All data are for educational and demonstration purposes only.
-
-The sampling preserves structure but not representativeness.
-
-Do not use for empirical research or publication.
-
-Last Updated: 2025-11
-Maintainer: Colin Zen (Tsinghua MLF Project)
-Version: Sample Data v1.0
